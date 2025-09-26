@@ -1,0 +1,214 @@
+\documentclass[8pt, compress]{beamer}
+
+\usetheme[progressbar=frametitle]{metropolis}
+\usecolortheme{aggie}
+\usefonttheme[stillsansseriftext]{serif}
+
+\usepackage{booktabs}
+\usepackage[scale=2]{ccicons}
+
+\usepackage{pgfplots}
+\usepgfplotslibrary{dateplot}
+\usepackage[font=normal]{subcaption}
+\usepackage{graphicx} % for pdf, bitmapped graphics files
+
+\usepackage{bm}
+\usepackage{amsmath,amssymb,mathrsfs,upgreek,dsfont,gensymb}
+\usepackage[ruled,vlined]{algorithm2e}
+
+\usepackage{xspace}
+\newcommand{\themename}{\textbf{\textsc{metropolis}}\xxspace}
+
+\usepackage{tikz}
+\usepackage{siunitx}
+\usepackage{adjustbox}
+
+\def\code#1{\texttt{#1}}
+\DeclareMathOperator*{\argmin}{arg\!\min}
+\DeclareMathOperator*{\argmax}{arg\!\max}
+\newcommand*\diff{\mathop{}\!\mathrm{d}}
+
+\newcommand \figref{Figure~\ref}
+\newcommand \tabref{Table~\ref}
+\newcommand \secref{Section~\ref}
+\newcommand \algref{Algorithm~\ref}
+
+\renewcommand{\baselinestretch}{1.1}
+
+\newtheorem{thm}{Theorem}
+
+% Convenience
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\T}{\mathcal{T}}
+\newcommand{\tht}{\bm{\theta}}
+\newcommand{\xx}{\bm{x}}
+\newcommand{\q}{\bm{q}}
+\newcommand{\qd}{\dot{\bm{q}}}
+\newcommand{\qdd}{\ddot{\bm{q}}}
+
+\title{
+Type \\[6pt] Anything \\[6pt] You Want
+}
+% \subtitle{An Aggie modification of a modern beamer theme}
+% \date{\today}
+\date{}
+\author{Your Name}
+\institute{UIN: xxxxxxxxx}
+\titlegraphic{\hfill\includegraphics[height=0.8cm]{figures/MEEN_horiz.pdf}}
+
+\beamerdefaultoverlayspecification{<+->} % Comment it if you don't want the animation.
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}{Table of contents}
+  \setbeamertemplate{section in toc}[sections numbered]
+  \tableofcontents%[hideallsubsections]
+\end{frame}
+
+%===================================================
+\section{Introduction}
+
+% ---------- Frame 1 ----------
+\begin{frame}{Problem \& Motivation}
+\begin{columns}[T,onlytextwidth]
+    \column{0.5\textwidth}
+    \begin{itemize}\setlength\itemsep{0.5em}
+        \item \textbf{Type} \textit{anything} you want.
+        \begin{itemize}\setlength\itemsep{0.5em}
+            \item \textbf{Type} \textit{anything} you want.
+        \end{itemize}
+    \end{itemize}
+
+    \column{0.5\textwidth}
+    \begin{figure}
+        \centering
+        \includegraphics[width=1\linewidth]{figures/PDF/prob_state.pdf}
+    \end{figure}
+\end{columns}
+\textbf{Type} \textit{anything} you want.
+\end{frame}
+
+
+%===================================================
+\section{Section Title}
+
+\subsection{Subsection title}
+
+% ---------- Frame 1 ----------
+\begin{frame}{Frame title}
+\begin{itemize} \setlength\itemsep{0.5em}
+  \item Type anything you want:
+  \[
+    x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}
+  \]
+  \begin{itemize}
+      \item Type anything you want.
+      \[
+        x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}
+      \]
+  \end{itemize}
+  \begin{itemize}
+      \item Type anything you want.
+  \end{itemize}
+  \item \textbf{Type} \textit{anything} you want.
+\end{itemize}
+\[
+    x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}
+\]
+\end{frame}
+
+
+%===================================================
+\section{Section Title}
+
+\begin{frame}{Frame title}
+\begin{figure}[t]
+  \centering
+  \begin{subfigure}[t]{0.33\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{figures/problem/problem_1.pdf}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[t]{0.32\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{figures/problem/problem_4.pdf}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[t]{0.33\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{figures/problem/problem_5.pdf}
+  \end{subfigure}
+  \begin{subfigure}[t]{0.33\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{figures/problem/problem_2.pdf}
+  \end{subfigure}
+  % \hfill
+  \begin{subfigure}[t]{0.33\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{figures/problem/problem_3.pdf}
+  \end{subfigure}
+  \caption{5 scenarios for single arm benchmark from \textbf{BenchMaker} \cite{chamzas2022-motion-bench-maker}.}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Frame title}
+\begin{itemize}
+  \item Type anything you want.
+  \item \textbf{Results:}
+  \begin{itemize}
+    \item \textsc{xx}: Type anything you want.
+  \end{itemize}
+\end{itemize}
+
+\medskip
+\begin{table}[h]
+  \centering
+  \begin{tabular}{lccc}
+    \toprule
+    Alg. & Facto & CHOMP & AtlasRRT \\
+    \midrule
+    Time (s) $\downarrow$       & \textbf{xx} & xx & xx \\
+    Max Time (s) $\downarrow$   & xx & xx  & xx  \\
+    Success (\%) $\uparrow$     & xx  & xx  & xx  \\
+    Smoothness $\downarrow$     & xx & xx & xx \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+\end{frame}
+
+
+%===================================================
+\section{Discussion and Takeaways}
+
+\begin{frame}{Key Takeaways}
+
+\end{frame}
+
+%===================================================
+\section{Appendix / Backup}
+
+\appendix
+
+{\setbeamercolor{palette primary}{fg=ag-blue, bg=ag-beige}
+\begin{frame}[standout]
+  Questions?
+\end{frame}
+}
+
+\begin{frame}[fragile]{}
+    \begin{center}
+        \Large Thank you!
+    \end{center}
+\end{frame}
+
+
+\begin{frame}[allowframebreaks]{References}
+
+  \bibliography{references.bib}
+  \bibliographystyle{ieeetr}
+
+\end{frame}
+
+\end{document}
